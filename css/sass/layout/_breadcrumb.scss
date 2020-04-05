@@ -1,0 +1,55 @@
+.breadcrumb-sec {
+    position: relative;
+    background-color: $main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 237px;
+
+    @include xs {
+        background-attachment: unset;
+        background-position: top center;
+        height: 160px;
+    }
+}
+
+.page-head {
+    font-size: 36px;
+    color: #fff;
+    font-family: bold;
+    margin-bottom: 9px;
+    position: relative;
+}
+
+ol.breadcrumb {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    margin: 0;
+}
+
+ol.breadcrumb li {
+    font-size: 16px;
+    color: #fff;
+    cursor: default;
+}
+
+ol.breadcrumb li.active {
+    color: #fff;
+}
+
+ol.breadcrumb li a {
+    font-size: 18px;
+    font-family: light;
+    color: #fff;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+ol.breadcrumb li a:hover {
+    color: $social;
+}

@@ -1,0 +1,388 @@
+.main-slider {
+    .owl-dots {
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: #fff;
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $main;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+}
+
+.main-slide {
+    position: relative;
+    width: 100%;
+    height: 637px;
+
+    @include sm {
+        height: 250px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(0deg, rgba(76, 76, 76, 1) 0%, rgba(76, 76, 76, 0) 50%);
+        display: flex;
+        align-items: center;
+    }
+
+    .text-overlay {
+        background-color: rgba(120, 11, 61, 0.949);
+        width: 427px;
+        height: 208px;
+        color: #fff;
+        padding: 44px;
+
+        #{$ltr} & {
+            width: 500px;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+
+        @include sm {
+            width: 100%;
+            padding: 20px;
+            height: auto;
+            background-color: rgba(120, 11, 61, 0.8);
+            text-align: center;
+        }
+    }
+
+    .slider-head {
+        line-height: 1.331;
+        font-family: bold;
+        font-size: 36px;
+        margin-bottom: 15px;
+
+        #{$ltr} & {
+            font-size: 30px;
+
+            @include sm {
+                font-size: 25px;
+            }
+        }
+
+        @include sm {
+            font-size: 25px;
+            text-align: center;
+        }
+    }
+
+    .sub-head {
+        font-family: light;
+        font-size: 20px;
+
+        @include sm {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
+.clients-cont {
+    margin-top: 84px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+
+    .boldText {
+        width: 700px;
+        margin: auto;
+        line-height: 1.333;
+        margin-top: 13px;
+        margin-bottom: 0;
+
+        @include sm {
+            width: auto;
+            font-size: 21px;
+        }
+    }
+
+    .lightText {
+        font-size: 18px;
+    }
+}
+
+.clients-slider {
+    position: relative;
+    margin-top: 20px;
+
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+
+        ////////////////////////////
+        .owl-dot {
+            background: #d1d1d1;
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $main;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+}
+
+.client {
+    width: 166px;
+    height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // background-color: rgba($color: #000000, $alpha: 0.5);
+
+    @include xs {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+    }
+
+    img {
+        max-width: 100%;
+        width: auto !important;
+        opacity: 0.6;
+        filter: grayscale(100%);
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+.news-cont {
+    margin-top: 98px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.news-slider {
+    margin-top: 22px;
+
+    .owl-dots {
+        margin-top: 25px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        @include sm {
+            display: flex;
+        }
+
+        .owl-dot {
+            background: #d1d1d1;
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $main;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+
+    .boldText {
+        font-size: 30px;
+    }
+
+}
+
+.new {
+    .new-img {
+        width: 100%;
+        height: 228px;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition(all 0.5s ease-in-out);
+            backface-visibility: hidden;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba($main, 0.90);
+        color: #fff;
+        font-family: med;
+
+        #{$ltr} & {
+            left: 10px;
+            right: auto;
+        }
+    }
+
+    .day {
+        font-size: 24px;
+        line-height: 1.083;
+    }
+
+    .mounth {
+        font-size: 12px;
+        line-height: 1.083;
+    }
+
+    .new-name {
+        font-family: med;
+        color: $text;
+        font-size: 20px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 30px;
+        display: block;
+        width: max-content;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    .new-desc {
+        line-height: 1.75;
+        color: $text;
+        font-size: 16px;
+        text-align: justify;
+        margin-top: 11px;
+    }
+
+
+}
+
+.more-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 53px;
+
+    .more {
+        color: $more-link;
+        font-size: 16px;
+        border-bottom: 1px solid $more-link;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            border-color: transparent;
+            color: $main;
+        }
+    }
+}
+
+.projects-slider {
+    .owl-dots {
+        margin-top: 25px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        @include sm {
+            display: flex;
+        }
+
+        .owl-dot {
+            background: #d1d1d1;
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 4.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $main;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $main;
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+.top-links-cont {
+    background-color: $top-back;
+
+    @include sm {
+        height: 0;
+    }
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.first-div {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        display: none;
+    }
+}
+
+.top-link {
+    margin-left: 19px;
+    color: $top-link;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    @include transition(all 0.3s ease-in-out);
+
+    i {
+        margin-left: 7px;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 7px;
+        }
+    }
+
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 19px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $main;
+    }
+
+
+}
+
+.sec-div {
+    display: flex;
+    align-items: center;
+
+    .social {
+        display: flex;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .sec-link {
+        margin-right: 1px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: $top-link;
+        background-color: $top-link-back;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            color: $main;
+        }
+
+        #{$ltr} & {
+            margin-left: 1px;
+            margin-right: 0;
+        }
+
+
+    }
+
+    .lang {
+        width: auto;
+        padding: 0 14px;
+        color: $lang;
+
+
+
+        span {
+            margin-left: 8px;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 8px;
+            }
+
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}
+
+.header-cont {
+    height: 110px;
+
+    @include md {
+        height: 69px;
+    }
+}
+
+.fixed-header {
+    padding: 24px 0;
+    z-index: 999;
+    background-color: #fff;
+    @include transition(all 0.3s ease-in-out);
+
+    @include sm {
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &.scroll {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+
+        @include sm {
+            padding: 5px 0;
+        }
+
+        .logo {
+            width: 200px;
+
+            @include md {
+                width: 175px;
+            }
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 254px;
+        display: block;
+        @include transition(all 0.3s ease-in-out);
+
+        @include md {
+            width: 200px;
+        }
+    }
+}
+
+._2nd-sec {
+    display: flex;
+    align-items: center;
+}

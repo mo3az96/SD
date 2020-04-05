@@ -1,0 +1,228 @@
+.contact-cont {
+    background-color: $back;
+    margin-top: 77px;
+    padding-top: 63px;
+    padding-bottom: 70px;
+
+
+    @include sm {
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 0 59px;
+
+        @include sm {
+            padding: 0;
+            margin-bottom: 35px;
+        }
+
+    }
+
+    .contact-icon {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 29px;
+        color: #fff;
+        background-color: $main;
+        border-radius: 50%;
+        margin-bottom: 27px;
+    }
+
+    .contact-name {
+        font-size: 21px;
+        color: $text;
+        font-family: bold;
+        margin-bottom: 11px;
+    }
+
+    .contact-desc {
+        font-size: 16px;
+        color: $text;
+        height: 44px;
+        margin-bottom: 18px;
+
+        @include sm {
+            height: auto;
+            margin-bottom: 15px;
+        }
+    }
+
+    .contact-link {
+        font-size: 24px;
+        font-family: med;
+        color: $main;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            color: $text;
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background-color: $social;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin: 0 4.5px;
+        color: $social-text;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            background-color: $main;
+            color: #fff;
+        }
+    }
+}
+
+footer {
+    background-color: $footer-back;
+    padding-top: 71px;
+
+    @include sm {
+        padding-top: 40px;
+    }
+
+    .foot-header {
+        font-size: 18px;
+        color: #fff;
+        font-family: bold;
+        margin-bottom: 34px;
+
+        @include sm {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .nav-foot {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 125px;
+        width: max-content;
+
+        @include sm {
+            margin: auto;
+            text-align: center;
+            width: 210px;
+        }
+    }
+
+    .foot-map-cont {
+        @include sm {
+            margin: 40px 0;
+        }
+    }
+
+    .nav-foot-li {
+        margin-bottom: 10px;
+
+        &:nth-of-type(4n) {
+            margin-bottom: 0;
+        }
+
+        &:nth-of-type(n+5) {
+            margin-right: 110px;
+
+            #{$ltr} & {
+                margin-left: 110px;
+                margin-right: 0;
+            }
+
+            @include sm {
+                margin-right: 50px;
+
+                #{$ltr} & {
+                    margin-left: 50px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .nav-foot-link {
+        font-size: 16px;
+        color: $footer;
+        display: inline-flex;
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            transform: translateX(-8px);
+
+            #{$ltr} & {
+                transform: translateX(8px);
+            }
+        }
+    }
+
+    .news-sub-header {
+        font-size: 16px;
+        color: $footer;
+        display: inline-flex;
+        margin-bottom: 23px;
+    }
+}
+
+.map {
+    height: 199px;
+    width: 100%;
+    background-color: $footer;
+}
+
+.copyright-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: $copy;
+    margin-top: 55px;
+    margin-bottom: 40px;
+
+    @include sm {
+        margin: 40px 0;
+    }
+
+    @include sm {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    img {
+        margin: 0 5px;
+    }
+
+    .tasawk {
+        margin: 0 4px;
+
+        @include sm {
+            margin: 5px 0 0;
+
+        }
+    }
+
+}
